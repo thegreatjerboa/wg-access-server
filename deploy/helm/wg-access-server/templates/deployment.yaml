@@ -49,6 +49,10 @@ spec:
                   name: "{{ $fullName }}"
                   key: privateKey
             {{- end }}
+            {{- if .Values.wireguard.config.externalHost }}
+            - name: WG_EXTERNAL_HOST
+              value: "{{ .Values.wireguard.config.externalHost }}"
+            {{- end }}
             {{- if .Values.web.config.adminUsername }}
             - name: WG_ADMIN_USERNAME
               valueFrom:

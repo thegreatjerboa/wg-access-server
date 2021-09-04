@@ -5,6 +5,7 @@ web:
   config:
     adminUsername: ""
     adminPassword: ""
+    externalHost: ""
   service:
     type: ClusterIP
 
