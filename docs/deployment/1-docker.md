@@ -10,5 +10,5 @@ docker run --rm -it
   --device /dev/net/tun:/dev/net/tun \
   -p 8000:8000/tcp \
   -p 51820:51820/udp \
-  place1/wg-access-server
+  thegreatjerboa/wg-access-server
 ```

@@ -7,7 +7,7 @@ from datetime import datetime
 
 # print the latest tags so we don't have to google our own
 # image to check :P
-r = urllib.request.urlopen('https://registry.hub.docker.com/v2/repositories/place1/wg-access-server/tags?page_size=10') \
+r = urllib.request.urlopen('https://registry.hub.docker.com/v2/repositories/thegreatjerboa/wg-access-server/tags?page_size=10') \
     .read() \
     .decode('utf-8')
 tags = json.loads(r).get('results', [])
@@ -19,7 +19,7 @@ print('\n'.join(['    ' + t for t in tags]))
 
 # tag the new image
 version = input('pick a published tag: ')
-docker_tag = f"place1/wg-access-server:{version}"
+docker_tag = f"thegreatjerboa/wg-access-server:{version}"
 
 # update the helm chart and quickstart manifest
 with open('deploy/helm/wg-access-server/Chart.yaml', 'r+') as f:
@@ -35,7 +35,7 @@ with open('deploy/k8s/quickstart.yaml', 'w') as f:
 subprocess.run(['helm', 'package', 'deploy/helm/wg-access-server/',
                 '--destination', 'docs/charts/'])
 subprocess.run(['helm', 'repo', 'index', 'docs/', '--url',
-                'https://place1.github.io/wg-access-server'])
+                'https://thegreatjerboa.github.io/wg-access-server'])
 
 # update gh-pages (docs)
 subprocess.run(['mkdocs', 'gh-deploy'])

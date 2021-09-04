@@ -98,7 +98,7 @@ spec:
           securityContext:
             capabilities:
               add: ['NET_ADMIN']
-          image: "place1/wg-access-server:v0.4.6"
+          image: "thegreatjerboa/wg-access-server:v0.4.6"
           imagePullPolicy: IfNotPresent
           ports:
             - name: http

@@ -3,7 +3,7 @@
 To install the chart with the release name `my-release`:
 
 ```bash
-$ helm install my-release --repo https://place1.github.io/wg-access-server wg-access-server
+$ helm install my-release --repo https://thegreatjerboa.github.io/wg-access-server wg-access-server
 ```
 
 The command deploys wg-access-server on the Kubernetes cluster in the default configuration. The configuration section lists the parameters that can be configured during installation.
@@ -82,5 +82,5 @@ ingress:
 | nodeSelector | object | `{}` |  |
 | tolerations | list | `[]` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
-| image.repository | string | `"place1/wg-access-server"` |  |
+| image.repository | string | `"thegreatjerboa/wg-access-server"` |  |
 | imagePullSecrets | list | `[]` |  |

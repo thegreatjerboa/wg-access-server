@@ -13,14 +13,14 @@ wg-access-server is a functional but young project. Contributions are welcome!
 
 ## Documentation
 
-[See our documentation website](https://place1.github.io/wg-access-server/)
+[See our documentation website](https://thegreatjerboa.github.io/wg-access-server/)
 
 Quick Links:
 
-- [Configuration Overview](https://place1.github.io/wg-access-server/2-configuration/)
-- [Deploy With Docker](https://place1.github.io/wg-access-server/deployment/1-docker/)
-- [Deploy With Helm](https://place1.github.io/wg-access-server/deployment/2-docker-compose/)
-- [Deploy With Docker-Compose](https://place1.github.io/wg-access-server/deployment/2-docker-compose/)
+- [Configuration Overview](https://thegreatjerboa.github.io/wg-access-server/2-configuration/)
+- [Deploy With Docker](https://thegreatjerboa.github.io/wg-access-server/deployment/1-docker/)
+- [Deploy With Helm](https://thegreatjerboa.github.io/wg-access-server/deployment/2-docker-compose/)
+- [Deploy With Docker-Compose](https://thegreatjerboa.github.io/wg-access-server/deployment/2-docker-compose/)
 
 ## Running with Docker
 
@@ -40,7 +40,7 @@ docker run \
   -e "WG_WIREGUARD_PRIVATE_KEY=$WG_WIREGUARD_PRIVATE_KEY" \
   -p 8000:8000/tcp \
   -p 51820:51820/udp \
-  place1/wg-access-server
+  thegreatjerboa/wg-access-server
 ```
 
 If you open your browser using your LAN ip address you can even connect your
@@ -54,11 +54,11 @@ You can connect to the web server on the local machine browser at http://localho
 wg-access-server ships a Helm chart to make it easy to get started on
 Kubernetes.
 
-Here's a quick start, but you can read more at the [Helm Chart Deployment Docs](https://place1.github.io/wg-access-server/deployment/3-kubernetes/)
+Here's a quick start, but you can read more at the [Helm Chart Deployment Docs](https://thegreatjerboa.github.io/wg-access-server/deployment/3-kubernetes/)
 
 ```bash
 # deploy
-helm install my-release --repo https://place1.github.io/wg-access-server wg-access-server
+helm install my-release --repo https://thegreatjerboa.github.io/wg-access-server wg-access-server
 
 # cleanup
 helm delete my-release
@@ -82,17 +82,17 @@ to connect your phone using the UI and QR code!
 
 ## Screenshots
 
-![Devices](https://github.com/Place1/wg-access-server/raw/master/screenshots/devices.png)
+![Devices](https://github.com/thegreatjerboa/wg-access-server/raw/master/screenshots/devices.png)
 
-![Connect iOS](https://github.com/Place1/wg-access-server/raw/master/screenshots/connect-mobile.png)
+![Connect iOS](https://github.com/thegreatjerboa/wg-access-server/raw/master/screenshots/connect-mobile.png)
 
-![Connect MacOS](https://github.com/Place1/wg-access-server/raw/master/screenshots/connect-desktop.png)
+![Connect MacOS](https://github.com/thegreatjerboa/wg-access-server/raw/master/screenshots/connect-desktop.png)
 
-![Sign In](https://github.com/Place1/wg-access-server/raw/master/screenshots/signin.png)
+![Sign In](https://github.com/thegreatjerboa/wg-access-server/raw/master/screenshots/signin.png)
 
 ## Changelog
 
-See the [CHANGELOG.md](https://github.com/Place1/wg-access-server/blob/master/CHANGELOG.md) file
+See the [CHANGELOG.md](https://github.com/thegreatjerboa/wg-access-server/blob/master/CHANGELOG.md) file
 
 ## Development
 

@@ -75,7 +75,7 @@ project any community support here is warmly welcomed.
 If you're using the now deprecated `file://` backend you can migrate to `sqlite3://` like this:
 
 ```bash
-# after upgrading to place1/wg-access-server:v0.3.0
+# after upgrading to thegreatjerboa/wg-access-server:v0.3.0
 docker exec -it <container-name> wg-access-server migrate file:///data sqlite3:///data/db.sqlite3
 ```
 
