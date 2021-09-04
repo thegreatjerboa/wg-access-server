@@ -10,10 +10,11 @@ web:
     type: ClusterIP
 
 wireguard:
+  ip_forward_enabled: false
   config:
     privateKey: ""
   service:
-    type: ClusterIP
+    type: NodePort
 
 persistence:
   enabled: false

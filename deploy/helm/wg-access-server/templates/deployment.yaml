@@ -27,6 +27,12 @@ spec:
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
     {{- end }}
+    {{- if .Values.wireguard.ip_forward_enabled  }}
+      securityContext:
+        sysctls:
+          - name: net.ipv4.ip_forward
+            value: "1"
+    {{- end }}
       containers:
         - name: {{ .Chart.Name }}
           securityContext:
